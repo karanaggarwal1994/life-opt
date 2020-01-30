@@ -1,7 +1,5 @@
 # Life-opt: Optimizing the Linear Fascicle Evaluation Algorithm for Multi-Core and Many-Core Systems
 
-# LiFE-GPU-opt: Optimizing the Linear Fascicle Evaluation Algorithm for Multi-Core Systems
-
 # About
 This software is an optimized implementation of the compute-intensive matrix operations of the LiFE algorithm for CPUs and GPUs.
 
