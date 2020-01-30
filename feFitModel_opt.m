@@ -115,7 +115,7 @@ switch fitMethod
     if sys==0
         out_data = bbnnls(M,dSig,w0,opt);
     elseif sys==1
-        out_data = bbnnls_cpu(M,dSig,w0,opt);
+        out_data = bbnnls_cpu(M,dSig,w0,opt,BLAS_PATH);
     elseif sys==2
         out_data = bbnnls_gpu(M,dSig,w0,opt);
 
