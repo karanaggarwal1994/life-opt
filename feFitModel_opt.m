@@ -40,8 +40,8 @@ dSig = varargin{2};
 fitMethod = varargin{3};
 Niter = varargin{4};
 preconditioner = varargin{5};
-sys = varargin{5};
-BLAS_PATH = varargin{5};
+sys = varargin{6};
+BLAS_PATH = varargin{7};
 
 
 % feFitModel() function in LiFE but restricted to the
