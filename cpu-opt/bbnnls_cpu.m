@@ -110,7 +110,7 @@ function out = bbnnls_cpu(M, b, x0, opt, BLAS_PATH)
     
     
     % Compile C++ file to generate .mexa64 code;
-    cpu_compile();
+    cpu_compile(BLAS_PATH);
     
     fgx = @(x) funcGrad(M, b, x ,Mg);
     % do some initialization for maintaining statistics
@@ -205,7 +205,7 @@ function [f, g] = funcGrad(A, b, x, Mg)
     end
 end
 
-function cpu_compile()
+function cpu_compile(BLAS_PATH)
     checkMexCompiled_cpu('-largeArrayDims', '-output', 'compute_diag', '-DNDEBUG', 'compute_diag.c', 'compute_diag_sub.c',BLAS_PATH)
     checkMexCompiled_cpu('-largeArrayDims', '-output', 'M_times_w', '-DNDEBUG', 'M_times_w.c', 'M_times_w_sub.c',BLAS_PATH)
     checkMexCompiled_cpu('-largeArrayDims', '-output', 'Mtransp_times_b', '-DNDEBUG','Mtransp_times_b.c', 'Mtransp_times_b_sub.c',BLAS_PATH)
