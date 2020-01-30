@@ -64,7 +64,12 @@ Also, include the CUDA path in bashrc file (use [link](https://devtalk.nvidia.co
 3. Run the script
 
 	```>>> life_opt_demo(sys,BLAS_PATH)```
+	
+	sys is an integer with options 0 to run original CPU code, 1 to run optimized CPU code and 2 to run optimized GPU code.
+	
+	BLAS_PATH is path of the OpenBLAS library in the system.
 
+	Sample run: life_opt_demo(1,'/home/ubuntu/openblas')
 # How to cite LiFE-opt
 [Karan Aggarwal, Uday Bondhugula "Optimizing the Linear Fascicle Evaluation Algorithm for Multi-Core Systems" Accepted to International Conference on Supercomputing (ICS) 2019 (to appear).](https://doi.org/10.1145/3330345.3332469)
 
